@@ -3,7 +3,13 @@ from colorama import Fore, Style
 
 hour = int(input('Tell me the hour: '))
 
-if hour == 12:
+if hour >=13:
+  print(hour - 12)
+else:
+  print(Fore.RED + "Error, put a correct 24-hour time!" + Style.RESET_ALL)
+
+# Old method
+""" if hour == 12:
   print("12 p.m.")
 elif hour == 13:
   print("1 p.m.")
@@ -27,7 +33,6 @@ elif hour == 22:
   print("10 p.m.")
 elif hour == 23:
   print("11 p.m.")
-elif hour == 24:
+elif hour == 24: 
   print("12 a.m.")
-else:
-  print(Fore.RED + "Error, put a correct 24-hour time!" + Style.RESET_ALL)
+print(Fore.RED + "Error, put a correct 24-hour time!" + Style.RESET_ALL) """
