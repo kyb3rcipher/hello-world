@@ -1,3 +1,8 @@
+/*
+Calcular el promedio de la edad de cuatro personas
+
+by: Kyb3r Cipher
+*/
 #include <iostream>
 using namespace std;
 

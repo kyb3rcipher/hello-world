@@ -1,3 +1,8 @@
+/*
+Calculate the age of a person
+
+by: Kyb3r Cipher
+*/
 #include <iostream>
 using namespace std;
 
