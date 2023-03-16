@@ -20,7 +20,7 @@ int main() {
     cout << "Dime el numero de alumnos: ";
     cin >> alumnos;
     
-    // Defirinir el pago por alumno dependiendo el numero de alumnos
+    // Definir el pago por alumno dependiendo el numero de alumnos
     if (alumnos <= 0) {
         cout << "Error: No hay alumnos :v";
         return 1;
