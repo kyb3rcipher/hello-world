@@ -7,13 +7,18 @@ by: Kyb3r Cipher
 using namespace std;
 
 int main() {
-    float precio, total, iva;
-    
-    for (int i = 1; i <= 4; i++) {
-        cout << "Dime el precio del articulo " << i << ": ";
-        cin >> precio;
-        total += precio;
-    }
+    float precio1, precio2, precio3, precio4, total, iva;
+
+    cout << "Dime el precio del articulo 1: ";
+    cin >> precio1;
+    cout << "Dime el precio del articulo 2: ";
+    cin >> precio2;
+    cout << "Dime el precio del articulo 3: ";
+    cin >> precio3;
+    cout << "Dime el precio del articulo 4: ";
+    cin >> precio4;
+    total = precio1 + precio2 + precio3 + precio4;
+
     iva = total * 0.16;
     
     cout << "\n====================================" << endl;

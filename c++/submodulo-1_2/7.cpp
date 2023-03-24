@@ -7,11 +7,18 @@ by: Kyb3r Cipher
 using namespace std;
 
 int main() {
-    int edad, promedio = 0;
-    for (int i = 1; i <= 4; i++) {
-        cout << "Dime la edad de la persona " << i << ": ";
-        cin >> edad;
-        promedio += edad;
-    }
+    int edad1, edad2, edad3, edad4, promedio = 0;
+    
+    cout << "Dime la edad de la persona 1: ";
+    cin >> edad1;
+    cout << "Dime la edad de la persona 2: ";
+    cin >> edad2;
+    cout << "Dime la edad de la persona 3: ";
+    cin >> edad3;
+    cout << "Dime la edad de la persona 4: ";
+    cin >> edad4;
+    
+    promedio = (edad1 + edad2 + edad3 + edad4) / 4;
+    
     cout << "El promedio de las edades es: " << promedio << endl;
 }
