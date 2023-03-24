@@ -9,16 +9,16 @@ using namespace std;
 
 int main() {
     int num1, num2;
-    
+
     cout << "Dime el numero 1: ";
     cin >> num1;
     cout << "Dime el numero 2: ";
     cin >> num2;
-    
-    if ((num % 2) == 0) {
-        cout << "El numero es par" << endl;
-    } else {
-        cout << "El numero es impar" << endl;
+
+    if (num1 == num2) {
+        cout << "La multiplicacion de " << num1 << " * " << num2 << " = " << num1 * num2;
+    } else if (num1 > num2) {
+        cout << "La resta de " << num1 << " - " << num2 << " = " << num1 - num2;
     }
     return 0;
 }

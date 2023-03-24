@@ -6,7 +6,7 @@ by: Kyb3r Cipher
 #include <iostream>
 using namespace std;
 
-int 5() {
+int main() {
     float base, altura, perimetro;
     cout << "Dime la base del rectangulo: ";
     cin >> base;
