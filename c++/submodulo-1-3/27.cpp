@@ -1,60 +1,67 @@
 /*
+Author: Kyb3r Cipher
+Grade: 2A Programacion TM - CBTIS 89
+Date: 03/29/2022
 
-by: Kyb3r Cipher
+Programa que usando switch case realize las siguientes operaciones:
+1. Suma
+2. Resta
+3. Multiplicacion
+4. Division
 */
 #include <iostream>
-#include "libraries/termcolor.hpp"
 #include "libraries/decocraft.hpp"
+#include "libraries/termcolor.hpp"
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    float pesos, dolares, euros, yenes, wones;
+    float num1, num2;
     int option;
 
-    // Definir color
-    cout << termcolor::green;
+    // Definir color :P
+    cout << termcolor::blue;
 
-    cout << "Dime los pesos a convertir: $";
-    cin >> pesos;
+    cout << "Dime el primer numero: ";
+    cin >> num1;
+    cout << "Dime el segundo numero: ";
+    cin >> num2;
 
     cout << "\n";
-    decoration_equal();
-    cout << "Convertir a: " << endl;
-    cout << "1. Dolares" << endl;
-    cout << "2. Euros" << endl;
-    cout << "3. Yenes" << endl;
-    cout << "4. Wones" << endl;
-    decoration_equal();
+    decoration_hyphen();
+    cout << "1. Suma" << endl;
+    cout << "2. Resta" << endl;
+    cout << "3. Multiplicacion" << endl;
+    cout << "4. Division" << endl;
+    decoration_hyphen();
     cout << "Dime la opcion >> ";
     cin >> option;
 
     clean_screen();
-    decoration_equal();
-    cout << "$" << pesos << " pesos son ";
+    decoration_hyphen();
     switch (option) {
         case 1:
-            cout << "$" << pesos * dolares << " dolares" << endl;
+            cout << "La suma de " << num1 << " + " << num2 << " = " << num1 + num2 << endl;
             break;
         case 2:
-            cout << "€" << pesos * euros << " euros" << endl;
+            cout << "La resta de " << num1 << " - " << num2 << " = " << num1 - num2 << endl;
             break;
         case 3:
-            cout << "¥" << pesos * yenes << " yenes" << endl;
+            cout << "La multiplicacion de " << num1 << " * " << num2 << " = " << num1 * num2 << endl;
             break;
         case 4:
-            cout << "₩" << pesos * wones << " wones" << endl;
+            cout << "La division de " << num1 << " / " << num2 << " = " << num1 / num2 << endl;
             break;
 
         default:
             cout << termcolor::red;
             clean_screen();
-            decoration_equal();
+            decoration_hyphen();
             cout << "Error: Opcion Invalida" << endl;
-            decoration_equal();
+            decoration_hyphen();
             return 1;
             break;
     }
-    decoration_equal();
+    decoration_hyphen();
 
     cout << termcolor::reset;
     return 0;
