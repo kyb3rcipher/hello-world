@@ -19,7 +19,7 @@ Declara los arreglos de 100 posiciones de tipo entero.
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    int arreglo1[150], arreglo2[150], arreglo3[150];
+    int arreglo1[151], arreglo2[151], arreglo3[151];    // 150 numeros + 1 para el numero 300
     int contador1 = 0, contador2 = 0;
 
     VariadicTable<int, int, int> vt({"Arreglo 1", "Arreglo 2", "Arreglo 3"}, 10);
@@ -34,12 +34,12 @@ int main(int argc, char *argv[]) {
         }
     }
     
-    for (int i = 0; i <= 150; i++)
+    for (int i = 0; i < contador1; i++) // se ejecutara 75 veces por que se ejecutara mientras sea menor (no igual) a 76
         arreglo3[i] = arreglo1[i] + arreglo2[i];
-    
-    // Calcula el 50% (la mitad) del numero por que solo se imprimira la mitad de los numeros, 75 + 75 = 150. Cuz en cada fila se imprime doble
-    // sumamos uno para imprimir la ultima linea.
-    for (int i = 0; i < ((0.5 * 150) + 1); i++)
+
+    // No se ejecuta el bucle 150 veces por que solo se deben imprimir 76 lineas (en cada una: un numero par y uno impar, y en la linea 76 el 300)
+    // 75 + 75 = 150, 150 numeros + 1 linea para el 300
+    for (int i = 0; i < contador1; i++)
         vt.addRow(arreglo1[i], arreglo2[i], arreglo3[i]);
     
     vt.print(cout);
