@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
             cout << "Tell me the secret word: ";
             cin >> secretWord;
             wordSize = secretWord.length();
-            vector<char> carac(wordSize, '_');
+            vector<char> revelation(wordSize, '_');
 
             // Convert the secret word to lowercases and capitals
             string secretWordUpper(wordSize, ' ');
@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
                 cout << hangman[counter] << endl;
                 cout << "Word: ";
                 for (int i = 0; i < wordSize; i++)
-                    cout << "" << carac[i] << " ";
+                    cout << "" << revelation[i] << " ";
                 cout << "\n";
                 decoration_asterik();
                 cout << "Letter: ";
@@ -79,9 +79,9 @@ int main(int argc, char *argv[]) {
                 for (int j = 0; j < wordSize; j++) {
                     if (letter[0] == secretWord[j] || letter[0] == secretWordUpper[j] || letter[0] == secretWordLower[j]) {
                         found = true;
-                        carac[j] = secretWord[j];
+                        revelation[j] = secretWord[j];
                         discovered += 1;
-                        break;
+                        //break;    // uncomment for desactive "Progressive Revelation Rule"
                     }
                 }
                 counter += (!found) ? 1 : 0;
