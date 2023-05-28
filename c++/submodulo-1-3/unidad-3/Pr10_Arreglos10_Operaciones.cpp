@@ -21,12 +21,13 @@ siguiendo algunas condiciones, posteriormente calcula y guarda en otros arreglos
 |        99 |       -10 |   89 |   109 |           -990 |    -9.9  |
 --------------------------------------------------------------------
 
-Codiciones:
+Condiciones:
 * En el arreglo numeros1 se almacenara unicamente datos positivos del 51 al 99.
 * En el arreglo numeros2 se almacenara negativos que esten en el rango del -50 al -1.
 * En los arreglos siguientes se almacenaran los resultados que arrojan las operaciones correspondientes.
 */
 #include <iostream>
+#include <iomanip>
 #include "libs/VariadicTable.h"
 using namespace std;
 
@@ -48,6 +49,7 @@ int main(int argc, char *argv[]) {
             cout << "\n";
         }
         
+        // Guardar el numero en el array correspondiente
         if (numero >= 51 && numero <= 99) {
             numeros1[contador1] = numero;
             contador1++;
