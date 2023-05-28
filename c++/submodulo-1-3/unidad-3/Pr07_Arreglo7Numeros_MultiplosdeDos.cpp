@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
         if ((i % 2) == 0) {
             arreglo1[contador] = i;
         } else {
-            arreglo2[contador- 1] = i;
+            arreglo2[contador - 1] = i;
         }
 
         contador++;

@@ -7,6 +7,16 @@ School: CBTIS 89 - 2A TM
 Programa que solicita el total de 6 compras realizadas y las almacena en un arreglo,
 en otros arreglos se debe almacenar infromacion de acuerdo a las siguientes codiciones:
 
+-----------------------------------------------------
+|   Compra   |  Descuento |    Total   | Porcentaje |
+-----------------------------------------------------
+|        800 |         80 |        720 | 10%        |
+|       2700 |        540 |       2160 | 20%        |
+|       1900 |        380 |       1520 | 20%        |
+|        150 |          0 |        150 | 0%         |
+|       7600 |       1900 |       5700 | 25%        |
+...
+
 * Si la compra el menor o igual a 300 no lleva descuento.
 * Si la compra es mayor de 300 pero menor o igual a 1000 lleva un descuento del 10%.
 * Si la compra es mayor de 1000 pero menor o igual a 5000 lleva un descuento del 20%.
