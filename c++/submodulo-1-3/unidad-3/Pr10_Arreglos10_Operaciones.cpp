@@ -24,7 +24,10 @@ siguiendo algunas condiciones, posteriormente calcula y guarda en otros arreglos
 Condiciones:
 * En el arreglo numeros1 se almacenara unicamente datos positivos del 51 al 99.
 * En el arreglo numeros2 se almacenara negativos que esten en el rango del -50 al -1.
-* En los arreglos siguientes se almacenaran los resultados que arrojan las operaciones correspondientes.
+* En caso de que a uno de los arreglos le falten numeros, se colocara un 0 en su lugar.
+   (por ejemplo si no hay numeros positivos suficientes para rellenar el array numeros1 se colocora un 0 para completar espacios)
+
+En los arreglos siguientes se almacenaran los resultados que arrojan las operaciones correspondientes.
 */
 #include <iostream>
 #include <iomanip>
@@ -32,7 +35,7 @@ Condiciones:
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    int numeros1[3], numeros2[3], suma[3], resta[3], multiplicacion[3];
+    int numeros1[3] = {0, 0, 0}, numeros2[3] = {0, 0, 0}, suma[3], resta[3], multiplicacion[3];
     float division[3];
     int contador1 = 0, contador2 = 0;
     
@@ -50,13 +53,16 @@ int main(int argc, char *argv[]) {
         }
         
         // Guardar el numero en el array correspondiente
-        if (numero >= 51 && numero <= 99) {
+        // Se considera una condicional mas (que contador sea menor a 3) para que la asignacion de numeros se ejecute 3 veces cada uno y no 6 como el ciclo for padre
+        if (contador1 < 3 and numero >= 51 && numero <= 99) {
             numeros1[contador1] = numero;
             contador1++;
-        } else if (numero >= -50) {
+            // Se considera una condicion para verificar que el numero sea menor o igual a -1 (para ver que el numero solo sea asignado a negativos)
+        } else if (contador2 < 3 and numero >= -50 && numero <= -1) {
             numeros2[contador2] = numero;
             contador2++;
         }
+        // Ejemplo: Colocamos el numero 60 siempre se cumplira el primer if 3 veces (hasta que el contador llegue a 2[3 contando desde 1]), NO asignara 60 a numeros2 por que 60 aunque es mayor a -50 no es menor o igual a -1.
         
     }
     
@@ -70,7 +76,7 @@ int main(int argc, char *argv[]) {
         
         cout << fixed << setprecision(2);   // definir decimales a 2
         
-        vt.addRow(numeros1[i], numeros2[i], suma[i], resta[i], multiplicacion[i], division[i]);
+        vt.addRow(numeros1[i], numeros2[i], suma[i], resta[i], multiplicacion[i], division[i]); // en caso de que el resultado de la division sea 0 imprime inf (infite) por el 0.
     }
     
     cout << "\n"; vt.print(cout);
