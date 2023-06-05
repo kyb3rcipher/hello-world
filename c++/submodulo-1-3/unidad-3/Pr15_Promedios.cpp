@@ -35,7 +35,8 @@ int main(int argc, char *argv[]) {
     
     VariadicTable<string, float, float, float, float, string> vt({"Nombre", "Calificaciones 1", "Calificaciones 2", "Calificaciones 3", "Promedio", "Status"}, 10);
     
-    cout << fixed << setprecision(2);   // definir el maximo de decimales a 2
+    cout << fixed << setprecision(1);   // definir el maximo de decimales a 2
+    //cout.precision(2);    // other way
     for (int alumno = 0; alumno < 4; alumno++)
         vt.addRow(nombres[alumno], calificaciones[alumno][0], calificaciones[alumno][1], calificaciones[alumno][2], promedio[alumno], status[alumno]);
     
