@@ -14,8 +14,8 @@ using namespace std;
 int main(int argc, char *argv[]) {
     int matrix[6][2], numero = 150;
     
-    for (int columna = 0; columna < 2; columna++) {
-        for (int fila = 0; fila < 6; fila++) {
+    for (int fila = 0; fila < 6; fila++) {
+        for (int columna = 0; columna < 2; columna++) {
             matrix[fila][columna] = numero;
             numero += 100;
         }

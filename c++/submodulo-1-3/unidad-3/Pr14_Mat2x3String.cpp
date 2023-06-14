@@ -12,10 +12,10 @@ posteriormente que imprima el contenido de la matriz.
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    string productos[3][2];
+    string productos[2][3];
     
-    for (int columna = 0; columna < 3; columna++) {
-        for (int fila = 0; fila < 2; fila++) {
+    for (int fila = 0; fila < 2; fila++) {
+        for (int columna = 0; columna < 3; columna++) {
             cout << "Dime el producto para [" << fila << " x " << columna << "]: ";
             cin >> productos[fila][columna];
         }
