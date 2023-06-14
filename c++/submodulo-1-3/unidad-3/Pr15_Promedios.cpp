@@ -4,7 +4,7 @@ Name: Kyb3r Cipher
 Date: 31/05/2023
 School: CBTIS 89 - 2A TM
 
-Elabora un programa en C++ que llene una matriz de NxN(40x40) con numeros de 1000 en 100, iniciando en 1000.
+Imprimir calificaciones y promedios
 */
 #include <iostream>
 #include "libs/VariadicTable.h"
