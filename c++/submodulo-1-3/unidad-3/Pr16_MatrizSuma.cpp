@@ -1,10 +1,10 @@
 /*
-Practica 12: Matrices 3
+Practica 16: Matrices 6
 Name: Kyb3r Cipher
 Date: 31/05/2023
 School: CBTIS 89 - 2A TM
 
-Elabora un progrma en C++ que llene dos matrices con valores numericos de la sigueinte manera:
+Elabora un programa en C++ que llene dos matrices con valores numericos de la siguiente manera:
 
 MatrizA[3][3] Debe contener valores de 10 en 10 inciaindo en 100.
 MatrizB[3][3] Debe contener valores de 20 en 20 inciaindo en 500.
