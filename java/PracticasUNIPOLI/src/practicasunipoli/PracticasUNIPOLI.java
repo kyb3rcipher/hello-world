@@ -13,8 +13,8 @@ public class PracticasUNIPOLI {
         int practice;
 
         do {
-            practice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of practice <1-5>:"));
-        } while (practice < 1 || practice > 5);
+            practice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of practice <1-6>:"));
+        } while (practice < 1 || practice > 6);
 
         switch (practice) {
             case 1:
@@ -36,6 +36,10 @@ public class PracticasUNIPOLI {
             case 5:
                 Pr05 pr5 = new Pr05();
                 pr5.setVisible(true);
+                break;
+            case 6:
+                Pr06 pr6 = new Pr06();
+                pr6.setVisible(true);
                 break;
         }
     }
