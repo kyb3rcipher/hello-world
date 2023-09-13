@@ -6,7 +6,7 @@ public class Exercise02 extends javax.swing.JFrame {
 
     public Exercise02() {
         initComponents();
-        setTitle("Exercise 03: Using Lists and Combined controls - Kyb3r Cipher");
+        setTitle("Exercise 02: Using Lists and Combined controls - Kyb3r Cipher");
         setLocationRelativeTo(null);
     }
 
