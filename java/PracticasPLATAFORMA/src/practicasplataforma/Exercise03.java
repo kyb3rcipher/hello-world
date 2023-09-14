@@ -99,7 +99,7 @@ public class Exercise03 extends javax.swing.JFrame {
         String username, password, email, type;
         
         username = fieldName.getText();
-        password = fieldPassword.getPassword().toString();
+        password = fieldPassword.getPassword().toString(); // use .getText(); for obtain the plain-text.
         email = fieldEmail.getText();
         type = comboType.getSelectedItem().toString();
         
@@ -112,6 +112,12 @@ public class Exercise03 extends javax.swing.JFrame {
                     "\nE-Mail: " + email +
                     "\nType: " + type
             );
+            
+            // Reset/Clean the values.
+            fieldName.setText("");
+            fieldPassword.setText("");
+            fieldEmail.setText("");
+            comboType.setSelectedIndex(0);
         }
     }//GEN-LAST:event_buttonRegisterActionPerformed
 
