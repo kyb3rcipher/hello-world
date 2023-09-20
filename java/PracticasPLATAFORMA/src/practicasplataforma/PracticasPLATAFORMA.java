@@ -13,8 +13,8 @@ public class PracticasPLATAFORMA {
         int practice;
 
         do {
-            practice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of practice <1-3>:"));
-        } while (practice < 1 || practice > 3);
+            practice = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of practice <1-4>:"));
+        } while (practice < 1 || practice > 4);
 
         switch (practice) {
             case 1:
@@ -28,6 +28,10 @@ public class PracticasPLATAFORMA {
             case 3:
                 Exercise03 ex3 = new Exercise03();
                 ex3.setVisible(true);
+                break;
+            case 4:
+                Exercise04 ex4 = new Exercise04();
+                ex4.setVisible(true);
                 break;
         }
     }
