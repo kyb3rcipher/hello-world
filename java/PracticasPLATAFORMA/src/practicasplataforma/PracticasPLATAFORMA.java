@@ -39,6 +39,23 @@ public class PracticasPLATAFORMA {
                     ex4.setVisible(true);
                 }
                 break;
+            case 5:
+                JOptionPane.showMessageDialog(null, "The exercise 05 contains images found in another project");
+                break;
+            case 6:
+                Exercise06 ex06 = new Exercise06();
+                ex06.setVisible(true);
+                break;
+            case 7:
+                JOptionPane.showMessageDialog(null, "The exercise 07 contains images found in another project");
+                break;
+            case 8:
+                JOptionPane.showMessageDialog(null, "The exercise 08 contains images found in another project");
+                break;
+            case 9:
+                Exercise10 ex09 = new Exercise10();
+                ex09.setVisible(true);
+                break;
             case 10:
                 Exercise10 ex10 = new Exercise10();
                 ex10.setVisible(true);
@@ -46,6 +63,12 @@ public class PracticasPLATAFORMA {
             case 13:
                 Exercise13 ex13 = new Exercise13();
                 ex13.setVisible(true);
+                break;
+            case 11:
+                JOptionPane.showMessageDialog(null, "The exercise 11 contains images found in another project");
+                break;
+            case 12:
+                JOptionPane.showMessageDialog(null, "The exercise 12 contains images found in another project");
                 break;
         }
     }
