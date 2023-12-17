@@ -23,8 +23,6 @@ int main(int argc, char *argv[]) {
     int cantidad[3];
     float precio[3], subtotal[3], iva[3], total[3];
 
-    VariadicTable<string, int, float, float, float, float> vt({"Articulos", "Cantidad", "Precio", "Subtotal", "IVA", "TOTAL"}, 10);
-    
 	for (int i = 0; i < 3; i++) {
         cout << i << ".- Dime el nombre del articulo, su cantidad y luego su precio: ";
         cin >> articulos[i] >> cantidad[i] >> precio[i];
@@ -32,12 +30,17 @@ int main(int argc, char *argv[]) {
         subtotal[i] = cantidad[i] * precio[i];
         iva[i] = subtotal[i] * 0.16;
         total[i] = subtotal[i] + iva[i];
-        
-        vt.addRow(articulos[i], cantidad[i], precio[i], subtotal[i], iva[i], total[i]);
     }
     
+    cout << "\n";   // line-break before table
     // Tabla
-    cout << "\n"; vt.print(cout);
+    VariadicTable<string, int, float, float, float, float> vt({"Articulos", "Cantidad", "Precio", "Subtotal", "IVA", "TOTAL"}, 10);
+    
+    for (int j = 0; j < 3; j++) {
+        vt.addRow(articulos[j], cantidad[j], precio[j], subtotal[j], iva[j], total[j]);
+    }
+        
+    vt.print(cout);
 
 	return 0;
 }

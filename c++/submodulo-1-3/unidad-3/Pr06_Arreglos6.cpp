@@ -22,7 +22,7 @@ Si la persona tiene 50 o mas se debe colocar un 1 ene l vector Grupo3, y en los 
 -----------------------------------------------
 */
 #include <iostream>
-#include "libs/VariadicTable.h"
+//#include "libs/VariadicTable.h"
 using namespace std;
 
 int main(int argc, char *argv[]) {
