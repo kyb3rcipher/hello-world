@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first web</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <a href="blog.html">Go to the blog</a>
+    
+    <hr>
+    <!-- The <h> tags is used for titles (not for text size), the search engines use <h> for titles indexes -->
+    <h1>My first heading</h1>
+    <h2>My second heading</h2>
+    <h3>My third heading</h3>
+    <h4>My fourth heading</h4>
+    <h5>My fifth heading</h5>
+    <!--<h6>My sixth heading</h6>-->
+    <h6>Happy piggy</h6>
+
+    <!-- For the text use <p> tag (phrase) -->
+    <p>Happy piggy are very happy</p>
+    <p>Sad piggy are very sad</p>
+    <hr>  <!-- separator -->
+    <h2>Felipe piffy</h2>
+    <p>
+        This is a text <span style="color:gray">more large</span>
+        and is for show <br><br>  <!-- <br> tag is a line BReak -->
+        the span tag!
+        <!-- The <span> tag is for identifier a thing inside other tag and later manipulate the span tag -->
+    </p>
+    <!-- This is a commentary -->
+
+    <a href="https://kyb3rcipher.com">Go to my website</a> <br>
+    <a target="_blank" href="https://kyb3rcipher.com">Go to my website in a new tab</a> <br>
+
+    <hr>
+    <!--<img src="img/NSLQVAPM.jpg" />-->
+    <!-- Use height and width for image size (when you use just one the other put automatically)-->
+    <img src="img/NSLQVAPM.jpg" height="400" />  <!-- for example: here I just use height and width is 400 too -->
+    <!--<img src="img/NSLQVAPM.jpg" height="400" width="100" />-->  <!-- but you can "force"/change the width adding the propiety -->
+    
+    <form action="/form" method="POST">
+        <label for="name">Name:</label>
+        <input value="NSLVAPM" type="text" id="name" name="album_name" placeholder="Name of album" />
+        <br>
+
+        <label>Release date</label>
+        <input value="2023-10-13" type="date" id="release_date" name="album_date" />
+        <br>
+
+        <label for="commentary">Commentary</label> <br>
+        <textarea rows="5" cols="50" id="commentary" name="album_commentary" placeholder="The best 2023 album!!!">Here u can put default value no use te value tag!</textarea>
+        <br>
+
+        <!--<input type="submit" />-->
+        <!-- When you create a <button> tag inside <form> tag the default type is submit -->
+        <button type="button">Button type</button>
+        <button type="reset">Reset type</button>
+        <button>Submit type</button>
+        <br> <button type="button"><img src="img/reset.png"/> Button type with image and text</button>
+    </form>
+    
+    <hr>
+    <!-- ul is No-ordened list (a dot) -->
+    <ul>
+        <li>Element 1</li>  <!-- li is List-item -->
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+    </ul>
+    <!-- ol is Ordened list (with numbers) -->
+    <ol>
+        <li value="0">Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+    </ol>
+
+    <ol style="list-style-type: lower-alpha;">
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>
+            <ul>
+                <li style="list-style-type: lower-roman;">SubElement 1</li>
+                <li style="list-style-type: lower-roman;">SubElemnet 2</li>
+                <li style="list-style-type: lower-roman;">SubElement 3</li>
+            </ul>
+        </li>
+    </ol>
+
+    <hr>
+    <table style="border: 1px solid black; width: 500px;">
+        <thead>
+            <tr>
+                <th>Product 💿</th>
+                <th>Price 💲</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NSLVAPMN Digital Album</td>
+                <td>$Be Real</td>
+            </tr>
+            <tr>
+                <td>UVST Digital Album</td>
+                <td>$Have a good musical ear</td>
+            </tr>
+            <tr>
+                <td>EUTDM Digital Album</td>
+                <td>$Be old</td>
+            </tr>
+            <tr>
+                <td>YHLQMDLG Digital Album</td>
+                <td>$Do whatever you want</td>
+            </tr>
+            <tr>
+                <td>x100PRE Digital Album</td>
+                <td>$Be super old fan 🔥👁️</td>
+            </tr>
+            <tr>
+                <td>Tu No Vive Así Digital Song format</td>
+                <td>$Discover the most important artist in the world</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>Total: $Good taste in music</td>
+        </tfoot>
+    </table>
+</body>
+</html>
