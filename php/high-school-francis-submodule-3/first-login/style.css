@@ -1,0 +1,178 @@
+:root {
+    --purple: #8C42AB;
+    --deep_purple: #693181;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
+    color: #E6E6E6;
+    background-color: #1F2229;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 249px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+header .text a {
+    font-family: 'Helvetica';
+    font-weight: bold;
+    color: var(--purple);
+}
+
+header ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px;
+}
+
+header ul li:last-child {
+    margin-right: 0;
+}
+
+header ul li a {
+    color: #42424a;
+    padding: 22px 0;
+    display: inline-block;
+    transition: all ease 0.3s;
+    font-size: 18px;
+}
+
+header ul li a:hover {
+    color: var(--deep_purple);
+}
+
+header ul .submenu {
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+}
+
+header ul li:hover .submenu {
+    z-index: 99;
+    opacity: 1;
+    margin-top: 0;
+}
+
+header ul .submenu li {
+    margin: 0;
+    width: 100%;
+}
+
+header ul .submenu li a {
+    padding: 15px 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+}
+
+h1 {
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+
+.container {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #2C303A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3B414F;
+    color: #FFFFFF;
+}
+
+.container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.container button[type="submit"] {
+    background-color: var(--purple);
+    font-weight: bold;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container button[type="submit"]:hover {
+    background-color: var(--deep_purple);
+}
+
+
+.container .password-container {
+    position: relative;
+}
+
+.container .password-container input {
+    padding-right: 30px;
+}
+
+.container .password-container .toggle-password {
+    position: absolute;
+    top: 35%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.container a,
+.container a:visited {
+    display: block;
+    margin-top: 18px;
+    color: white;
+}
+
+.container a:hover {
+    color: var(--purple);
+}

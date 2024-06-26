@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		* {
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    outline: none;
+		    text-decoration: none;
+		}
+
+		body {
+		    font-family: 'Oswald', sans-serif;
+		    overflow-x: hidden;
+		    color: #E6E6E6;
+		    background-color: #1F2229;
+		}
+
+		header {
+		    background-color: white;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    width: 100%;
+		    padding: 0 249px;
+		    border-bottom: 1px solid #dbdbdb;
+		}
+
+		header .text a{
+		    font-family: 'Helvetica';
+		    font-weight: bold;
+		    color: #D41919;
+		}
+		header ul li {
+		    display: inline-block;
+		    list-style: none;
+		    margin: 0 30px;
+		}
+
+		header ul li:last-child {
+		    margin-right: 0;
+		}
+		header ul li a {
+		    color: #42424a;
+		    padding: 22px 0;
+		    display: inline-block;
+		    transition: all ease 0.3s;
+		    font-size: 18px;
+		}
+		header ul li a:hover {
+		    color: #8C42AB;
+		}
+
+		header ul .submenu {
+		    position: absolute;
+		    width: 200px;
+		    background-color: white;
+		    box-shadow: 0 20px 45px #00000020;
+		    margin-top: -50px;
+		    opacity: 0;
+		    z-index: -999;
+		    transition: all ease 0.5s;
+		}
+		header ul li:hover .submenu {
+		    z-index: 99;
+		    opacity: 1;
+		    margin-top: 0;
+		}
+		header ul .submenu li {
+		    margin: 0;
+		    width: 100%;
+		} 
+		header ul .submenu li a {
+		    padding: 15px 20px;
+		    display: inline-block;
+		    width: 100%;
+		}
+
+		img {
+			display: block;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		  	width: 20%;
+		}
+	</style>
+
+</head>
+<body>
+    <header>
+        <div class="text">
+            <a href="#">★ KYB3RNavbar</a>
+        </div>
+        <nav>
+            <ul>
+            	<li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Product</a>
+                    <ul class="submenu">
+                        <li><a href="#">Jacket</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Sweaters</a></li>
+                        <li><a href="#">Socks</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img src="star.gif">
+</body>
+</html>
