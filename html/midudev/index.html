@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <!-- For metadates (no renderise in web) -->
+    <head>
+        <meta charset="utf-8">
+        <!-- The width of content is the screen size -->
+        <meta name="viewport" content="width=device-width">
+
+        <title>Portfolio Kyb3r Cipher 💽</title>
+        <meta name="description" content="Portfolio of Kyb3r +10 years of experience">
+
+        <!-- OPEN GRAPH (https://ogp.me, https://www.opengraph.xyz) -->
+        <meta property="og:title" content="Portfolio of a Sofware Enginer"> <!-- If I dont set this take by default the title -->
+        <meta property="og:description" content="Description">
+        <meta property="og:image" content="profile.png">
+        <meta property="og:image:alt" content="Profile star picture">
+
+        <link rel="alternate" href="https://kyb3rcipher.com/es" hreflang="es">
+        <link rel="canonical" href="https://kyb3rcipher.com">
+
+        <meta name="robots" content="index, follow">
+        <!-- For header color (in safary and android)-->
+        <meta name="theme-color" content="#09F">
+        
+        <!-- Favicon (for default: favicon.ico )-->
+        <link rel="icon" type="image/jpg" href="profile.png">
+
+        <style>
+            body {
+                background: #FAFAFA;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Portfolio of Kyb3r</h1>
+            <!-- Semantic:
+            <h1>: The tag
+                <h1>: Open tag and </h1> Close tag
+            <h1>All this is the element</h1>-->
+
+            <!-- <h1>-<h6> -->
+
+            <nav>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="https://github.com" target="_blank" rel="noreferer">GitHub</a>
+            </nav>
+        </header>
+
+        <button id="show">Open</button>
+        <dialog id="dialog">    <!-- You can use: open attribute for defualt open dialog -->
+            <h1>A modal</h1>
+            <button id="hide">Close</button>
+        </dialog>
+        <script>
+            window.show.addEventListener('click', () => {
+                window.dialog.showModal();
+            });
+            window.hide.addEventListener('click', () => {
+                window.dialog.close();
+            });
+        </script>
+        
+        <!-- Sematic specefic role (https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) -->
+        <!--<div role="button">Click here</div>-->
+
+        <video autoplay muted poster="profile.png" src="nslqvapmn-horse.mp4"></video>
+        <br><br>
+        <audio controls src="sample-3s.mp3"></audio>
+
+        <main>
+        <!-- Anidar tags -->
+        <p>
+            +10 years of experience of <strong>Development</strong>
+            Enginer of Sofware, SysAdmin and Hacker.
+        </p>
+
+        <h2 id="experience">experience</h2>
+        <ul>
+            <li class="list-item">Parrot Security - 2022</li>
+            <li class="list-item">Escolares MX - 2024</li>
+        </ul>
+
+        <!--
+        Normal element
+        Remplace element: no close tag, remplce for widget a multimedia element. For example the image bcs no use the content tag is remplaced for the image
+        -->
+
+        <!-- In XML/JSX the tags need auto close "/>" but in HTML not is necesary bcs is a remplace element the element no need a close bcs is remplaced for a thing -->
+        <a download href="profile.png"> <!-- Download only works for local sources, in external source go to the href source link -->
+            <img id="profile-image" src="profile.png" width=200 height=200 alt="Star image" title="Profile image">
+        </a>
+
+        <img src="profile.png" width=200 height=200 alt="Star image" title="Profile image" hidden="john">
+        <br><br>    <!-- Remplace for line-break -->
+        <input type="color">     <!-- Remplace for type input -->
+
+        <!-- Attributes: global [class, id] and spacific: [src, href] -->
+
+        <!-- <tag> mdn html-->
+        <!-- This is a commentary -->
+
+        <h2 id="projects">Realized Projects</h2>
+        
+        <!-- Semantic [definition: significate of something] (https://web.dev/learn/html/semantic-html, https://www.w3schools.com/html/html5_semantic_elements.asp) -->
+        <aside>
+            <header>
+                <h3>My favorite technologies</h3>
+            </header>
+            <ol type="1" reversed start=10>
+                <li>C++</li>
+                <li>Python</li>
+                <li value=10>Java</li>
+                <li>SQL</li>
+            </ol>
+        </aside>
+
+        <section>
+            
+            <article>
+                <header>
+                    <h4>Parrot ARM Builder</h4>
+                    <!--<img loading="lazy" style="width: 100%; aspect-ratio: 1582/733;" src="spacex-website-screeshoot.png" alt="SpaceX website screenshoot" title="SpaceX website">-->
+
+                </header>
+                <p>
+                    Bulder for Raspberry Pi of Parrot OS System.
+                </p>
+                <footer>
+                    <small>Technolgies: Shell scripting, C++</small>
+                </footer>
+            </article>
+        </section>
+
+        <section>
+            <h2>Frecuent questions</h2>
+
+            <details>
+                <summary>What are your studies?</summary>
+                <p>I study in the university of MIT Web Devleopment</p>
+            </details>
+            <details open>
+                <summary>What are your favorite language?</summary>
+                <p>I like C++</p>
+            </details>
+            <details>
+                <summary>Some hobby?</summary>
+                <p>Yes I like photography</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Contact form</h2>
+            
+            <form method="POST" action="#">
+                <fieldset>
+                    <div>
+                        <legend>Personal information</legend>
+                        <label>Name:
+                            <input type="text" name="name" placeholder="Kyb3r Cipher" required>
+                        </label>
+                    </div>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@kyb3rcipher.com" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional information</legend>
+                    <div>
+                        <label>Telephone:
+                            <input type="tel" name="telephone" placeholder="+52 XXX-XXX-XXX" pattern="[0-9]{9}" required>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Others</legend>
+                    
+                    <label>Contact type:
+                        <select>
+                            <option>Work</option>
+                            <option selected>Information</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+                    <label>Accept the terms and conditions?:
+                        <input type="checkbox">
+                    </label>
+
+                    <datalist id="languages">
+                        <option>JavaScript</option>
+                        <option>Python</option>
+                        <option>Java</option>
+                        <option>C++</option>
+                    </datalist>
+
+                    <label>Languaje:
+                        <input list="languages">
+                    </label>
+                </fieldset>
+
+                <input type="submit">
+                <!--<button>Submit</button> == <button type="submit">Submit</button>-->
+            </form>
+        </section>
+        </main>
+
+        <!-- iFrame site inside the side (you can block this with metatags) -->
+        <iframe width=560 height=315 src="https://kyb3rcipher.com" title="Kyb3r Cipher website" frameborder="0"></iframe>
+            <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/3nYLTiY5skU?si=20hf-zJqJPa5KdqV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <footer>
+            Copyright &copy 2024 - The best portfolio
+            <br><br>
+
+            <a href="tel:+526144232374">Call me</a> <br>
+            <a href="mailto:example@kyb3rcipher.com">Send me a Email</a> <br>
+            <a href="whatsapp://send?abid=phonenumber&text=Hello Kyb3r">Send me a WhatsApp</a>
+        </footer>
+    </body>
+</html>
