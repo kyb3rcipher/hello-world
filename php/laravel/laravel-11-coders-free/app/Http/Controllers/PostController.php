@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePostRequest;
+use App\Mail\PostCreateMail;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
@@ -20,7 +23,7 @@ class PostController extends Controller
     public function create(Post $post) {
         return view('posts.create', compact('post'));
     }
-    public function store(Request $request) {
+    public function store(StorePostRequest $request) {
         /*$post = new Post();
         $post->title = $request->title;
         $post->slug = $request->slug;
@@ -29,14 +32,16 @@ class PostController extends Controller
         $post->save();*/
 
         // https://laravel.com/docs/11.x/validation#available-validation-rules
-        $request->validate([
+        /*$request->validate([
             'title' => 'required|min:5|max:255',
             'slug' => ['required', 'unique:posts', 'min:5', 'max:255'],
             'category' => 'required|min:5|max:255',
             'content' => 'required'
-        ]);
+        ]);*/
 
-        Post::create($request->all());
+        $post = Post::create($request->all());
+
+        //Mail::to('test@test.com')->send(new PostCreateMail($post));
 
         return redirect("/posts");
     }
