@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Exercise 2 - Live Text</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Write something 👇</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="create-outline" slot="start"></ion-icon>
+        <ion-input [(ngModel)]="userText" placeholder="Write here..."></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Live text</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text-center">
+      <ion-text color="primary">
+        <h1>{{ userText || 'No text' }}</h1>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-button id="home-button" routerLink="/"><ion-icon name="home-outline"></ion-icon> Home</ion-button>

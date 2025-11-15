@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Exercise 6 - Alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">exercise6</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-button id="present-alert">Click Me</ion-button>
+    <ion-alert
+      trigger="present-alert"
+      header="Title"
+      subHeader="A subtile but this is optional"
+      message="A message here."
+      [buttons]="alertButtons"
+    ></ion-alert>
+  </div>
+</ion-content>
+
+<ion-button id="home-button" routerLink="/"><ion-icon name="home-outline"></ion-icon> Home</ion-button>

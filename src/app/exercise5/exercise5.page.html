@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Exercise 5 - Factorial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Write a number 👇</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="alert-circle-outline" slot="start" style="margin-right: 8px;"></ion-icon>
+        <!-- Added (ionInput)="calculateFactorial()" event -->
+        <ion-input type="number" [(ngModel)]="number" (ionInput)="calculateFactorial()" placeholder="Write here..."></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>  
+
+  <ion-card *ngIf="number > 0">
+    <ion-card-header>
+      <ion-card-title>Factorial of {{ number }}:</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text-center">
+      <ion-text color="danger">
+        <h2><strong>[ !{{ number }} ] = {{ calculationSteps }} = {{ factorial }}</strong></h2>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-button id="home-button" routerLink="/"><ion-icon name="home-outline"></ion-icon> Home</ion-button>

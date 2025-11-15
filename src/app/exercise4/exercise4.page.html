@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Exercise 4 - Multiply tables</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Write something 👇</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="close-outline" slot="start"></ion-icon>
+        <ion-input type="number" (ngModelChange)="calculateTable()" [(ngModel)]="number" placeholder="Write here..."></ion-input>
+        <ion-checkbox [(ngModel)]="reverse" (ngModelChange)="calculateTable()">Reverse</ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Table of {{ number }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text-center">
+      <ion-item *ngFor="let result of result; let index = index">
+        <ion-text color="primary">
+          {{ number }} x {{ index + 1 }} = {{ result }}
+        </ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-button id="home-button" routerLink="/"><ion-icon name="home-outline"></ion-icon> Home</ion-button>
